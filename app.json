@@ -5,7 +5,23 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
-  },
-  "name": "react-native-app-1"
+    ],
+    "platforms": ["ios", "android"],
+    "android": {
+      "package": "com.yourname.reactnativeapp1",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "useNextNotificationsApi": true
+    },
+    "ios": {
+      "bundleIdentifier": "com.yourname.reactnativeapp1"
+    },
+    "description": "A React Native app using Expo for server data fetching and static data display.",
+    "extra": {
+      "API_URL": "https://assessments.reliscore.com/api/cric-scores/",
+      "CORS_PROXY": "https://cors-anywhere.herokuapp.com/"
+    }
+  }
 }
